@@ -1,0 +1,50 @@
+#Definición de nuestro "contrato" de nuestra API
+
+#<< Types >>
+
+type Query {
+    "Lista de los estudiantes de la academia"
+    estudiantes: Sring
+
+}
+
+"Información de los estudiantes"
+type Estudiantes {
+    "identificativo del estudiante"
+    id: ID!
+    nam: String!
+    email: String!
+    website: String
+    course: [Course!]!
+}
+
+type Curso {
+    id: ID!
+    title: String!
+    description: String!
+    clases: Int!
+    time: Float!
+    logo: String!
+    level: Nivel!
+    path: String!
+    teacher: String!
+    students: [Estudiantes]
+    reviews: [Valoracion!]!    
+}
+
+type Valoracion  {
+    id: ID!
+    name: String!
+    points: Float!
+    comment: String   
+}
+
+#<< Enums >>
+enum Nivel {
+
+    TODOS
+    NOVATOS
+    INTERMEDIO
+    EXPERTO
+
+}
