@@ -1,10 +1,12 @@
 import { IResolvers } from 'graphql-tools';
 import query from './query';
+import type from './type';
 
 // Definir consultas
 const resolversMap : IResolvers =  {
 
-    ...query
+    ...query,
+    ...type
 
 }
 

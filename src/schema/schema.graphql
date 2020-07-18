@@ -4,7 +4,7 @@
 
 type Query {
     "Lista de los estudiantes de la academia"
-    estudiantes: String
+    estudiantes: [Estudiante!]!
 
 }
 
@@ -12,10 +12,10 @@ type Query {
 type Estudiante {
     "identificativo del estudiante"
     id: ID!
-    nam: String!
+    name: String!
     email: String!
     website: String
-    course: [Course!]!
+    courses: [Course!]!
 }
 
 type Course {

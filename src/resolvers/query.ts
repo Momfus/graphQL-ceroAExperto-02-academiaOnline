@@ -1,11 +1,12 @@
 import { IResolvers } from 'graphql-tools';
+import { database } from '../data/data.store';
 
 // Definir consultas
 const query : IResolvers =  {
 
     Query: {
-        estudiantes(): string {
-            return 'Lista de estudiantes';
+        estudiantes(): any {
+            return database.estudiantes;
         }
     }
 
