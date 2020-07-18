@@ -4,12 +4,12 @@
 
 type Query {
     "Lista de los estudiantes de la academia"
-    estudiantes: Sring
+    estudiantes: String
 
 }
 
 "Información de los estudiantes"
-type Estudiantes {
+type Estudiante {
     "identificativo del estudiante"
     id: ID!
     nam: String!
@@ -18,7 +18,7 @@ type Estudiantes {
     course: [Course!]!
 }
 
-type Curso {
+type Course {
     id: ID!
     title: String!
     description: String!
@@ -28,7 +28,7 @@ type Curso {
     level: Nivel!
     path: String!
     teacher: String!
-    students: [Estudiantes]
+    students: [Estudiante]
     reviews: [Valoracion!]!    
 }
 
