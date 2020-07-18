@@ -5,7 +5,7 @@ import { database } from '../data/data.store';
 const query : IResolvers =  {
 
     Query: {
-        estudiantes(): any { // Lista
+        estudiantes(): any { // Lista estudiantes
             return database.estudiantes;
         },
         estudiante( __: void, {id} ): any { // Por ID
@@ -22,7 +22,10 @@ const query : IResolvers =  {
                 }
 
             }
-        }
+        },
+        cursos(): any { // Lista de cursos
+            return database.cursos;
+        },
 
     }
 
