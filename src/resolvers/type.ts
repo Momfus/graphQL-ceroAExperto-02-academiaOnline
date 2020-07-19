@@ -19,6 +19,27 @@ const type : IResolvers =  {
             return cursosLista;
 
         }
+    },
+    
+    Course: {
+        students: parent => {
+            const listaEstudiantes: Array<any> = [];
+            const idCurso = parent.id;
+            database.estudiantes.map( (estudiante: any ) => {
+
+                if( estudiante.courses.filter( (id: any) => id === idCurso ) > 0 )  { // Si encuentra un estudiante con el id del curso (siendo una lista mayor que cero el resultado) lo agrega
+
+                    listaEstudiantes.push(estudiante);
+                    
+                }
+
+            });
+
+            return listaEstudiantes;
+        },
+
+        path: parent => `https://www.udemy.com${parent.path}`,
+
     }
 
 }
