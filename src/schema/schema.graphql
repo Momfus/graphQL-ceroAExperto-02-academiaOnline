@@ -1,6 +1,6 @@
 #Definición de nuestro "contrato" de nuestra API
 
-#<< Types >>
+#<< Request >>
 
 type Query {
     "Lista de los estudiantes de la academia"
@@ -14,6 +14,29 @@ type Query {
 
 }
 
+type Mutation {
+    cursoNuevo( curso: CursoInput! ): Course!
+    modificarCurso( curso: CursoInput!): Course!
+    eliminarCurso(id: ID!): Course!
+}
+
+
+# Definición de inputs
+input CursoInput {
+
+    id: ID
+    title: String!
+    description: String!
+    clases: Int!
+    time: Float!
+    logo: String!
+    level: Nivel=TODOS
+    path: String!
+    teacher: String!
+
+}
+
+# Definición de tipos
 "Información de los estudiantes"
 type Estudiante {
     "identificativo del estudiante"
