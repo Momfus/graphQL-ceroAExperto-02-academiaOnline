@@ -9,6 +9,8 @@ type Query {
     estudiante(id: ID!): Estudiante!
     "Lista de los cursos de la academia"
     cursos: [Course!]!
+    "Información del curso de la academia seleccionado por ID"
+    curso(curso: ID!): Course!
 
 }
 
@@ -47,6 +49,7 @@ type Valoracion  {
 enum Nivel {
 
     TODOS
+    MEDIUM
     NOVATOS
     INTERMEDIO
     EXPERTO
