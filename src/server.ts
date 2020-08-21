@@ -35,8 +35,7 @@ app.get('/', expressPlayground ({
 
 // Inicializar servidor http
 const httpServer = createServer(app);
-
-const PORT = 5200;
+const PORT = process.env.PORT || 5300; // De no usar la varible de entorno, usar 5300
 httpServer.listen(
     {
     port: PORT
