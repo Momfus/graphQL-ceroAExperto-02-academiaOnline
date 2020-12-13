@@ -1,0 +1,9 @@
+"Información de los estudiantes"
+type Estudiante {
+    "identificativo del estudiante"
+    id: ID!
+    name: String!
+    email: String!
+    website: String
+    courses: [Course!]!
+}

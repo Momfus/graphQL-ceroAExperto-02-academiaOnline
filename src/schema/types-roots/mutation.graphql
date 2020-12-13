@@ -1,0 +1,7 @@
+#Definición de los mutation
+
+type Mutation {
+    cursoNuevo( curso: CursoInput! ): Course!
+    modificarCurso( curso: CursoInput!): Course!
+    eliminarCurso(id: ID!): Course!
+}

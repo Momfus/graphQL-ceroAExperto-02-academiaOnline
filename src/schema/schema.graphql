@@ -1,26 +1,5 @@
 #Definición de nuestro "contrato" de nuestra API
 
-#<< Request >>
-
-type Query {
-    "Lista de los estudiantes de la academia"
-    estudiantes: [Estudiante!]!
-    "Información del estudiante de la academia seleccionado por ID"
-    estudiante(id: ID!): Estudiante!
-    "Lista de los cursos de la academia"
-    cursos: [Course!]!
-    "Información del curso de la academia seleccionado por ID"
-    curso(curso: ID!): Course!
-
-}
-
-type Mutation {
-    cursoNuevo( curso: CursoInput! ): Course!
-    modificarCurso( curso: CursoInput!): Course!
-    eliminarCurso(id: ID!): Course!
-}
-
-
 # Definición de inputs
 input CursoInput {
 
@@ -37,36 +16,8 @@ input CursoInput {
 }
 
 # Definición de tipos
-"Información de los estudiantes"
-type Estudiante {
-    "identificativo del estudiante"
-    id: ID!
-    name: String!
-    email: String!
-    website: String
-    courses: [Course!]!
-}
 
-type Course {
-    id: ID!
-    title: String!
-    description: String!
-    clases: Int!
-    time: Float!
-    logo: String!
-    level: Nivel!
-    path: String!
-    teacher: String!
-    students: [Estudiante]
-    reviews: [Valoracion!]!    
-}
 
-type Valoracion  {
-    id: ID!
-    name: String!
-    points: Float!
-    comment: String   
-}
 
 #<< Enums >>
 enum Nivel {
