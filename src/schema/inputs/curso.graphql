@@ -1,4 +1,3 @@
-#Definición de nuestro "contrato" de nuestra API
 
 # Definición de inputs
 input CursoInput {
@@ -12,20 +11,5 @@ input CursoInput {
     level: Nivel=TODOS
     path: String!
     teacher: String!
-
-}
-
-# Definición de tipos
-
-
-
-#<< Enums >>
-enum Nivel {
-
-    TODOS
-    MEDIUM
-    NOVATOS
-    INTERMEDIO
-    EXPERTO
 
 }

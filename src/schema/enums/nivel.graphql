@@ -1,0 +1,10 @@
+#<< Enums >>
+enum Nivel {
+
+    TODOS
+    MEDIUM
+    NOVATOS
+    INTERMEDIO
+    EXPERTO
+
+}
